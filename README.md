@@ -1,5 +1,8 @@
 # Proyecto "Artemisa"
 
+<img width="269" alt="imagen" src="https://user-images.githubusercontent.com/17259655/204031958-b4bc049e-a1fc-470f-9850-18c6a35bb146.png">
+
+
 Artemisa es un proyecto **educativo** que toma su noombre de la Diosa griega Artemisa, asociada a los nacimientos y a las tierras de cultivo vírgenes, como este proyecto.
 
 El presente repositorio contendrá documentos normativos y guias que establecerán las reglas y políticas de operación para el proyecto.
