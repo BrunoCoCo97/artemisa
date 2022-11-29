@@ -24,4 +24,4 @@ Existirá un repositorio privado de videos y documentos asociados a un curso en 
 Aqui también se definirá el formato del exámen de admisión al proyecto Artemisa, que básicamente es un Challenge que será definido posteriormente, junto con las instrucciones para su asignación, ejecución y reevisión.
 
 
-Documentos de gobierno para el proyecto artemisa:
+Documentos de gobierno para el proyecto artemisa::
