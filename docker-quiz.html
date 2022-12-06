@@ -10,10 +10,12 @@
     <div class="container">
         <h3><span class="texto">Domain : Orchestration</span></h3>
         <h4><em><span class="texto">Q1 : A global service is a service that runs&nbsp; ____&nbsp; task/tasks on every node that meet the placement and resource constraints</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Many</span><br>
-        <span class="texto"><strong>B. </strong>One</span><br>
-        <span class="texto"><strong>C. </strong>more than one</span><br>
-        <span class="texto"><strong>D. </strong>None</span></p>
+        <p>
+        <span class="texto"><b>A. </b>Many</span><br>
+        <span class="texto"><b>B. </b>One</span><br>
+        <span class="texto"><b>C. </b>more than one</span><br>
+        <span class="texto"><b>D. </b>None</span>
+        </p>
         <div class="oculta">
             <p><b>Correct Answer: B</b></p>
             <p><b>Explanation</b></p>
@@ -26,10 +28,10 @@
         </div>
         <h3><span class="texto">Domain : Orchestration</span></h3>
         <h4><em><span class="texto">Q2 : Your company needs to run a custom monitoring application published in Docker Hub called “examplecorp/stats-collector”. You must ensure this would run in all swarm nodes, regardless how many nodes you currently have or if a new one would join the swarm eventually. This monitoring system requires an environment variable called ENDPOINT_ADDRESS that sends the metrics to an external service hosted at ‘service.example.com’. Which of the following commands would accomplish these requirements?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>docker service create –name stats-collector –replicas=1 –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
-        <span class="texto"><strong>B. </strong>docker service create –name stats-collector –replicas=auto –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
-        <span class="texto"><strong>C. </strong>docker service create –name stats-collector –mode=global -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
-        <span class="texto"><strong>D. </strong>docker service create –name stats-collector –mode=replicated -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span></p>
+        <p><span class="texto"><b>A. </b>docker service create –name stats-collector –replicas=1 –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
+        <span class="texto"><b>B. </b>docker service create –name stats-collector –replicas=auto –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
+        <span class="texto"><b>C. </b>docker service create –name stats-collector –mode=global -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
+        <span class="texto"><b>D. </b>docker service create –name stats-collector –mode=replicated -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span></p>
         <div class="oculta">
             <p><b>Correct Answer: C</b></p>
             <p><b>Explanation</b></p>
@@ -42,10 +44,10 @@
         </div>
         <h3><span class="texto">Domain : Orchestration</span></h3>
         <h4><em><span class="texto">Q3 : Which of the following is NOT true regarding docker swarm mode?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>You can deploy both kinds of nodes, managers and workers, using the Docker Engine</span><br>
-        <span class="texto"><strong>B. </strong>For each service, you can declare the number of tasks you want to run. When you scale up or down, the swarm manager automatically adapts by adding or removing tasks to maintain the desired state.</span><br>
-        <span class="texto"><strong>C. </strong>The swarm manager automatically assigns addresses to the containers on the overlay network when it initializes or updates the application.</span><br>
-        <span class="texto"><strong>D. </strong>Docker swarm mode is a plugin which you can install alongside docker to&nbsp; run a cluster of docker engines</span></p>
+        <p><span class="texto"><b>A. </b>You can deploy both kinds of nodes, managers and workers, using the Docker Engine</span><br>
+        <span class="texto"><b>B. </b>For each service, you can declare the number of tasks you want to run. When you scale up or down, the swarm manager automatically adapts by adding or removing tasks to maintain the desired state.</span><br>
+        <span class="texto"><b>C. </b>The swarm manager automatically assigns addresses to the containers on the overlay network when it initializes or updates the application.</span><br>
+        <span class="texto"><b>D. </b>Docker swarm mode is a plugin which you can install alongside docker to&nbsp; run a cluster of docker engines</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: D</b></p>
         <p><b>Explanation</b></p>
@@ -61,10 +63,10 @@
 </div>        
         <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em><span class="texto">Q4 : Which of the following patterns would exclude all Python byte-code files from being copied during the Docker image creation process?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>**.pyc</span><br>
-        <span class="texto"><strong>B. </strong>**/*.pyc</span><br>
-        <span class="texto"><strong>C. </strong>*.pyc</span><br>
-        <span class="texto"><strong>D. </strong>/*.pyc</span></p>
+        <p><span class="texto"><b>A. </b>**.pyc</span><br>
+        <span class="texto"><b>B. </b>**/*.pyc</span><br>
+        <span class="texto"><b>C. </b>*.pyc</span><br>
+        <span class="texto"><b>D. </b>/*.pyc</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
         <p><b>Explanation</b></p>
@@ -75,10 +77,10 @@
 </div>        
         <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em>Q5 : Which of the following statement is correct? Pick exactly two statements.</em></h4>
-        <p><span class="texto"><strong>A. </strong>Image is a collection of immutable layers whereas container is a running instance of an image.</span><br>
-        <span class="texto"><strong>B. </strong>Container can exist without the image but image cannot exist without container</span><br>
-        <span class="texto"><strong>C. </strong>Only one container can be spawned from a given image at a time</span><br>
-        <span class="texto"><strong>D. </strong>If multiple containers are spawned from the same image then they all use the same copy of image in memory.</span></p>
+        <p><span class="texto"><b>A. </b>Image is a collection of immutable layers whereas container is a running instance of an image.</span><br>
+        <span class="texto"><b>B. </b>Container can exist without the image but image cannot exist without container</span><br>
+        <span class="texto"><b>C. </b>Only one container can be spawned from a given image at a time</span><br>
+        <span class="texto"><b>D. </b>If multiple containers are spawned from the same image then they all use the same copy of image in memory.</span></p>
 <div class="oculta">
         <p><b>Correct Answers: A and D</b></p>
         <p><b>Explanation</b></p>
@@ -91,10 +93,10 @@
 </div>        
         <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em><span class="texto">Q6 : You are in a directory containing a file named Dockerfile-app. You want to build a docker image using this “Dockerfile-app” file without renaming it to “Dockerfile”. Which of the following answers is correct?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>docker build -d Dockerfile-app</span><br>
-        <span class="texto"><strong>B. </strong>docker build -f Dockerfile-app</span><br>
-        <span class="texto"><strong>C. </strong>docker build –dockerfile Dockerfile-app</span><br>
-        <span class="texto"><strong>D. </strong>docker build –from-file Dockerfile-app</span></p>
+        <p><span class="texto"><b>A. </b>docker build -d Dockerfile-app</span><br>
+        <span class="texto"><b>B. </b>docker build -f Dockerfile-app</span><br>
+        <span class="texto"><b>C. </b>docker build –dockerfile Dockerfile-app</span><br>
+        <span class="texto"><b>D. </b>docker build –from-file Dockerfile-app</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B&nbsp;</b></p>
         <p><b>Explanation</b></p>
@@ -109,10 +111,10 @@
 </div>        
         <h3><span class="texto">Domain : Installation and Configuration</span></h3>
         <h4><em><span class="texto">Q7 : Bob did a fresh installation of docker on his new linux server. He hasn’t tinkered with anything and has just installed docker packages from official repository. He runs a new container with command “docker run -d nginx” , which logging driver will this container use?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Syslog</span><br>
-        <span class="texto"><strong>B. </strong>Logentries</span><br>
-        <span class="texto"><strong>C. </strong>Json-file</span><br>
-        <span class="texto"><strong>D. </strong>Journald</span></p>
+        <p><span class="texto"><b>A. </b>Syslog</span><br>
+        <span class="texto"><b>B. </b>Logentries</span><br>
+        <span class="texto"><b>C. </b>Json-file</span><br>
+        <span class="texto"><b>D. </b>Journald</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -125,10 +127,10 @@
 </div>        
         <h3><span class="texto">Domain : Installation and Configuration</span></h3>
         <h4><em><span class="texto">Q8 : Which of the following gives a web dashboard to manage docker cluster?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Docker swarm mode</span><br>
-        <span class="texto"><strong>B. </strong>Docker UCP</span><br>
-        <span class="texto"><strong>C. </strong>Docker-compose</span><br>
-        <span class="texto"><strong>D. </strong>DTR</span></p>
+        <p><span class="texto"><b>A. </b>Docker swarm mode</span><br>
+        <span class="texto"><b>B. </b>Docker UCP</span><br>
+        <span class="texto"><b>C. </b>Docker-compose</span><br>
+        <span class="texto"><b>D. </b>DTR</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
         <p><b>Explanation</b></p>
@@ -143,10 +145,10 @@
 </div>
         <h3><span class="texto">Domain : Networking</span></h3>
         <h4><em><span class="texto">Q9 : Bob runs a container with –net=host, which of the following will NOT true? There are already multiple containers running on the host.</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>The container will use host network namespace and the network interfaces and IP stack of the host.</span><br>
-        <span class="texto"><strong>B. </strong>All containers in the host network are able to communicate with each other on the host interfaces.</span><br>
-        <span class="texto"><strong>C. </strong>Because they are using the host networking namespace, two containers are able to bind to the same TCP port.</span><br>
-        <span class="texto"><strong>D. </strong>From a networking standpoint this is equivalent to multiple processes running on a host without containers.</span></p>
+        <p><span class="texto"><b>A. </b>The container will use host network namespace and the network interfaces and IP stack of the host.</span><br>
+        <span class="texto"><b>B. </b>All containers in the host network are able to communicate with each other on the host interfaces.</span><br>
+        <span class="texto"><b>C. </b>Because they are using the host networking namespace, two containers are able to bind to the same TCP port.</span><br>
+        <span class="texto"><b>D. </b>From a networking standpoint this is equivalent to multiple processes running on a host without containers.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -160,11 +162,11 @@
 </div>        
         <h3><span class="texto">Domain : Security</span></h3>
         <h4><em><span class="texto">Q10 : Grants in UCP are made up of which of the following?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>subject, role and resource set</span><br>
-        <span class="texto"><strong>B. </strong>subject, role and containers</span><br>
-        <span class="texto"><strong>C. </strong>nodes, role and containers</span><br>
-        <span class="texto"><strong>D. </strong>subject, node and containers</span><br>
-        <span class="texto"><strong>E. </strong>images, containers and nodes</span></p>
+        <p><span class="texto"><b>A. </b>subject, role and resource set</span><br>
+        <span class="texto"><b>B. </b>subject, role and containers</span><br>
+        <span class="texto"><b>C. </b>nodes, role and containers</span><br>
+        <span class="texto"><b>D. </b>subject, node and containers</span><br>
+        <span class="texto"><b>E. </b>images, containers and nodes</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
@@ -179,10 +181,10 @@
 </div>        
         <h3><span class="texto">Domain : Security</span></h3>
         <h4><em><span class="texto">Q11 : Which of the following is </span><b>NOT</b><span class="texto"> true about selinux ?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>SELinux= Security-Enhanced Linux</span><br>
-        <span class="texto"><strong>B. </strong>SELinux provides a mechanism for supporting</span><a href="https://en.wikipedia.org/wiki/Access_control" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Access_control', '_blank', 'noopener'); return false;"> <span class="texto">access control</span></a><span class="texto"> security policies</span><br>
-        <span class="texto"><strong>C. </strong>SELinux comes bundled with docker</span><br>
-        <span class="texto"><strong>D. </strong>SELinux is a set of kernel modifications and user-space tools that have been added to various</span><a href="https://en.wikipedia.org/wiki/Linux_distribution" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Linux_distribution', '_blank', 'noopener'); return false;"> <span class="texto">Linux distributions</span></a><span class="texto">.</span></p>
+        <p><span class="texto"><b>A. </b>SELinux= Security-Enhanced Linux</span><br>
+        <span class="texto"><b>B. </b>SELinux provides a mechanism for supporting</span><a href="https://en.wikipedia.org/wiki/Access_control" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Access_control', '_blank', 'noopener'); return false;"> <span class="texto">access control</span></a><span class="texto"> security policies</span><br>
+        <span class="texto"><b>C. </b>SELinux comes bundled with docker</span><br>
+        <span class="texto"><b>D. </b>SELinux is a set of kernel modifications and user-space tools that have been added to various</span><a href="https://en.wikipedia.org/wiki/Linux_distribution" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Linux_distribution', '_blank', 'noopener'); return false;"> <span class="texto">Linux distributions</span></a><span class="texto">.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -195,10 +197,10 @@
 </div>        
         <h3><span class="texto">Domain : Storage and Volumes</span></h3>
         <h4><em><span class="texto">Q12 : Bob wants to update the secret being used by one of his service. What is the correct sequence of actions to be performed by him?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Update the existing secret using docker secret update</span><br>
-        <span class="texto"><strong>B. </strong>Update the existing secret , restart all the services using this secret</span><br>
-        <span class="texto"><strong>C. </strong>Create a new secret, update the service to use this new secret , delete the old secret</span><br>
-        <span class="texto"><strong>D. </strong>Create a new secret, create a new service with this new secret, delete old secret and old service</span></p>
+        <p><span class="texto"><b>A. </b>Update the existing secret using docker secret update</span><br>
+        <span class="texto"><b>B. </b>Update the existing secret , restart all the services using this secret</span><br>
+        <span class="texto"><b>C. </b>Create a new secret, update the service to use this new secret , delete the old secret</span><br>
+        <span class="texto"><b>D. </b>Create a new secret, create a new service with this new secret, delete old secret and old service</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -212,10 +214,10 @@
 </div>        
         <h3><span class="texto">Domain : Orchestration</span></h3>
         <h4><em><span class="texto">Q13 : Bob is running a docker swarm cluster with multiple manager nodes. Bob needs to remove one the manager nodes from the cluster permanently. Bob has access to this manager node. What is the safest way for him to remove a manager node from the cluster?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Simply shut down the server and let the Raft quorum decides to remove it permanently from the swarm.</span><br>
-        <span class="texto"><strong>B. </strong>Run “docker swarm leave” on the specific node.</span><br>
-        <span class="texto"><strong>C. </strong>Firstly demote the manager node to a worker and then remove it using “docker swarm leave”</span><br>
-        <span class="texto"><strong>D. </strong>Stop the docker service on this specific manager node. Wait until its status change to ‘Unreachable’ by checking the status on another manager node. Once it disappears from the list of manager nodes, you can safely shut down this node.</span></p>
+        <p><span class="texto"><b>A. </b>Simply shut down the server and let the Raft quorum decides to remove it permanently from the swarm.</span><br>
+        <span class="texto"><b>B. </b>Run “docker swarm leave” on the specific node.</span><br>
+        <span class="texto"><b>C. </b>Firstly demote the manager node to a worker and then remove it using “docker swarm leave”</span><br>
+        <span class="texto"><b>D. </b>Stop the docker service on this specific manager node. Wait until its status change to ‘Unreachable’ by checking the status on another manager node. Once it disappears from the list of manager nodes, you can safely shut down this node.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -231,10 +233,10 @@
 </div>        
         <h3><span class="texto">Domain : Orchestration</span></h3>
         <h4><em><span class="texto">Q14 : DCT stands for?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Docker Content Transmission</span><br>
-        <span class="texto"><strong>B. </strong>Docker Container Transmission</span><br>
-        <span class="texto"><strong>C. </strong>Docker Certificate Trust</span><br>
-        <span class="texto"><strong>D. </strong>Docker Content Trust</span></p>
+        <p><span class="texto"><b>A. </b>Docker Content Transmission</span><br>
+        <span class="texto"><b>B. </b>Docker Container Transmission</span><br>
+        <span class="texto"><b>C. </b>Docker Certificate Trust</span><br>
+        <span class="texto"><b>D. </b>Docker Content Trust</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: D</b></p>
         <p><b>Explanation</b></p>
@@ -247,10 +249,10 @@
 </div>        
         <h3><span class="texto">Domain : Orchestration</span></h3>
         <h4><em><span class="texto">Q15 : Which of the following options are available to run a single container?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>published port, user, log driver, restart policy</span><br>
-        <span class="texto"><strong>B. </strong>published port, user, log driver, placement constraints</span><br>
-        <span class="texto"><strong>C. </strong>published port, volume, secrets, log driver</span><br>
-        <span class="texto"><strong>D. </strong>volume, secrets, log driver, memory limit</span></p>
+        <p><span class="texto"><b>A. </b>published port, user, log driver, restart policy</span><br>
+        <span class="texto"><b>B. </b>published port, user, log driver, placement constraints</span><br>
+        <span class="texto"><b>C. </b>published port, volume, secrets, log driver</span><br>
+        <span class="texto"><b>D. </b>volume, secrets, log driver, memory limit</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
@@ -265,10 +267,10 @@
 </div>        
         <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em><span class="texto">Q16 : Docker image consists of _____ layers each of which represents a Dockerfile instruction. The layers are stacked and each one is a delta of the changes from the previous layer.</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>read and write</span><br>
-        <span class="texto"><strong>B. </strong>write only</span><br>
-        <span class="texto"><strong>C. </strong>read only</span><br>
-        <span class="texto"><strong>D. </strong>Movable</span></p>
+        <p><span class="texto"><b>A. </b>read and write</span><br>
+        <span class="texto"><b>B. </b>write only</span><br>
+        <span class="texto"><b>C. </b>read only</span><br>
+        <span class="texto"><b>D. </b>Movable</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -280,10 +282,10 @@
 </div>        
         <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em><span class="texto">Q17 : Which of the following statements is NOT TRUE about multi-stage builds?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Multi-stage builds eliminates the need of separate Dockerfiles.</span><br>
-        <span class="texto"><strong>B. </strong>Multi-stage builds helps on creation of smaller image sizes.</span><br>
-        <span class="texto"><strong>C. </strong>You cannot select which step you want to start your build process in a multi-stage build once you defined all steps.</span><br>
-        <span class="texto"><strong>D. </strong>With multi-stage builds, you can create images for different purposes, such as development and production.</span></p>
+        <p><span class="texto"><b>A. </b>Multi-stage builds eliminates the need of separate Dockerfiles.</span><br>
+        <span class="texto"><b>B. </b>Multi-stage builds helps on creation of smaller image sizes.</span><br>
+        <span class="texto"><b>C. </b>You cannot select which step you want to start your build process in a multi-stage build once you defined all steps.</span><br>
+        <span class="texto"><b>D. </b>With multi-stage builds, you can create images for different purposes, such as development and production.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -296,10 +298,10 @@
 </div>        
         <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em><span class="texto">Q18 : If we don’t specify a tag then by convention which tag is pulled while running docker pull command?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Production</span><br>
-        <span class="texto"><strong>B. </strong>Staging</span><br>
-        <span class="texto"><strong>C. </strong>Latest</span><br>
-        <span class="texto"><strong>D. </strong>Master</span></p>
+        <p><span class="texto"><b>A. </b>Production</span><br>
+        <span class="texto"><b>B. </b>Staging</span><br>
+        <span class="texto"><b>C. </b>Latest</span><br>
+        <span class="texto"><b>D. </b>Master</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -314,10 +316,10 @@
 </div>        
         <h3><span class="texto">Domain : Installation and Configuration</span></h3>
         <h4><em><span class="texto">Q19 : What is the default location of secrets inside a Docker container?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>/run/secrets/</span><br>
-        <span class="texto"><strong>B. </strong>/secrets/</span><br>
-        <span class="texto"><strong>C. </strong>/var/run/</span><br>
-        <span class="texto"><strong>D. </strong>/var/secrets/</span></p>
+        <p><span class="texto"><b>A. </b>/run/secrets/</span><br>
+        <span class="texto"><b>B. </b>/secrets/</span><br>
+        <span class="texto"><b>C. </b>/var/run/</span><br>
+        <span class="texto"><b>D. </b>/var/secrets/</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
@@ -330,19 +332,19 @@
 </div>        
         <h3><span class="texto">Domain : Installation and Configuration</span></h3>
         <h4><em><span class="texto">Q20 : How do you setup the default logging driver on Docker daemon to be the syslog driver?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>On /etc/docker/daemon.yaml or C:\ProgramData\docker\config\daemon.yaml, just add:</span><br>
+        <p><span class="texto"><b>A. </b>On /etc/docker/daemon.yaml or C:\ProgramData\docker\config\daemon.yaml, just add:</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp;log-driver: “syslog”</span><br>
-        <span class="texto"><strong>B. </strong>On /etc/docker/daemon.json or C:\ProgramData\docker\config\daemon.json, just add:</span><br>
+        <span class="texto"><b>B. </b>On /etc/docker/daemon.json or C:\ProgramData\docker\config\daemon.json, just add:</span><br>
         <span class="texto">&nbsp; &nbsp; {</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp;“log-driver”: “syslog”&nbsp;</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp;}</span><br>
-        <span class="texto"><strong>C. </strong>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add:</span><br>
+        <span class="texto"><b>C. </b>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add:</span><br>
         <span class="texto">&nbsp; &nbsp; {</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp; “log-driver”: “syslog”</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp;}</span><br>
-        <span class="texto"><strong>D. </strong>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add: log-driver: “syslog”</span><br>
-        <span class="texto"><strong>E. </strong>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add: log-driver: “syslog”</span><br>
-        <span class="texto"><strong>F. </strong>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add:</span><br>
+        <span class="texto"><b>D. </b>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add: log-driver: “syslog”</span><br>
+        <span class="texto"><b>E. </b>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add: log-driver: “syslog”</span><br>
+        <span class="texto"><b>F. </b>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add:</span><br>
         <span class="texto">&nbsp; &nbsp; {</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp;“log-driver”: “syslog”</span><br>
         <span class="texto">&nbsp; &nbsp; &nbsp;}</span></p>
@@ -353,11 +355,11 @@
 </div>        
         <h3><span class="texto">Domain : Networking</span></h3>
         <h4><em><span class="texto">Q21 : Which of the following commands can be used to attach an existing network named ‘net1’ to a container ‘container1’ which is currently running in network named ‘net2’?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>docker network connect net1 net2 container1</span><br>
-        <span class="texto"><strong>B. </strong>docker network connect net1 container1</span><br>
-        <span class="texto"><strong>C. </strong>docker connect network net1 net2</span><br>
-        <span class="texto"><strong>D. </strong>docker connect network net1 container1</span><br>
-        <span class="texto"><strong>E. </strong>docker connect network net1 net2 container1</span></p>
+        <p><span class="texto"><b>A. </b>docker network connect net1 net2 container1</span><br>
+        <span class="texto"><b>B. </b>docker network connect net1 container1</span><br>
+        <span class="texto"><b>C. </b>docker connect network net1 net2</span><br>
+        <span class="texto"><b>D. </b>docker connect network net1 container1</span><br>
+        <span class="texto"><b>E. </b>docker connect network net1 net2 container1</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
         <p><b>Explanation</b></p>
@@ -373,10 +375,10 @@
 </div>        
         <h3><span class="texto">Domain : Networking</span></h3>
         <h4><em><span class="texto">Q22 : Which of the following is a valid command to assign static IP to a container?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>docker run –static-ip 172.18.0.22 &lt;image&gt;</span><br>
-        <span class="texto"><strong>B. </strong>docker run –ip 172.18.0.22 &lt;image&gt;</span><br>
-        <span class="texto"><strong>C. </strong>None of the above</span><br>
-        <span class="texto"><strong>D. </strong>docker run –network-ip 172.18.0.22 &lt;image&gt;</span></p>
+        <p><span class="texto"><b>A. </b>docker run –static-ip 172.18.0.22 &lt;image&gt;</span><br>
+        <span class="texto"><b>B. </b>docker run –ip 172.18.0.22 &lt;image&gt;</span><br>
+        <span class="texto"><b>C. </b>None of the above</span><br>
+        <span class="texto"><b>D. </b>docker run –network-ip 172.18.0.22 &lt;image&gt;</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -393,10 +395,10 @@
         <h3><span class="texto">Domain : Security</span></h3>
         <h4><em><span class="texto">Q23 : Bob wants to test an untrusted docker image which has a bug due to which it starts consuming memory rapidly which causes other programs on the system to run out of </span></em><em><span class="texto">memory and crash. Bob wants to run the container and limit the max memory it can to be 512MB.</span></em><br>
         <em><span class="texto">Which of the following can bob use while running a container to deal with this problem?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>docker run –limit 512m</span><br>
-        <span class="texto"><strong>B. </strong>docker run –limit 512</span><br>
-        <span class="texto"><strong>C. </strong>docker run -m 512m</span><br>
-        <span class="texto"><strong>D. </strong>docker run -m 512</span></p>
+        <p><span class="texto"><b>A. </b>docker run –limit 512m</span><br>
+        <span class="texto"><b>B. </b>docker run –limit 512</span><br>
+        <span class="texto"><b>C. </b>docker run -m 512m</span><br>
+        <span class="texto"><b>D. </b>docker run -m 512</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -408,10 +410,10 @@
 </div>        
         <h3><span class="texto">Domain : Security</span></h3>
         <h4><em><span class="texto">Q24 : What is the recommended way of dealing with loss of root in in DCT?</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>Regenerate a new root key</span><br>
-        <span class="texto"><strong>B. </strong>Sign existing user certs with a new root key</span><br>
-        <span class="texto"><strong>C. </strong>Contact docker support.</span><br>
-        <span class="texto"><strong>D. </strong>Create a new DCT cluster</span></p>
+        <p><span class="texto"><b>A. </b>Regenerate a new root key</span><br>
+        <span class="texto"><b>B. </b>Sign existing user certs with a new root key</span><br>
+        <span class="texto"><b>C. </b>Contact docker support.</span><br>
+        <span class="texto"><b>D. </b>Create a new DCT cluster</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -424,10 +426,10 @@
         <h3><span class="texto">Domain : Storage and Volumes</span></h3>
         <h4><em><span class="texto">Q25 : Which of the following statements is NOT true?</span></em><br>
         <em><span class="texto">By default all files created inside a container are stored on a writable container layer. This means that:</span></em></h4>
-        <p><span class="texto"><strong>A. </strong>The data persists when that container no longer exists</span><br>
-        <span class="texto"><strong>B. </strong>Two different containers can’t share the data present in their writable layer.</span><br>
-        <span class="texto"><strong>C. </strong>A container’s writable layer is tightly coupled to the host machine where the container is running. You can’t easily move the data somewhere else.</span><br>
-        <span class="texto"><strong>D. </strong>Writing into a container’s writable layer requires a</span><a href="https://docs.docker.com/storage/storagedriver/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/storage/storagedriver/', '_blank', 'noopener'); return false;"> <span class="texto">storage driver</span></a><span class="texto"> to manage the filesystem.</span></p>
+        <p><span class="texto"><b>A. </b>The data persists when that container no longer exists</span><br>
+        <span class="texto"><b>B. </b>Two different containers can’t share the data present in their writable layer.</span><br>
+        <span class="texto"><b>C. </b>A container’s writable layer is tightly coupled to the host machine where the container is running. You can’t easily move the data somewhere else.</span><br>
+        <span class="texto"><b>D. </b>Writing into a container’s writable layer requires a</span><a href="https://docs.docker.com/storage/storagedriver/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/storage/storagedriver/', '_blank', 'noopener'); return false;"> <span class="texto">storage driver</span></a><span class="texto"> to manage the filesystem.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
