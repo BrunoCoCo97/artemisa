@@ -3,16 +3,17 @@
     <style>
       .container { text-align: left; }
       .oculta { display: none; }
+      .texto { font-weight: 400; }
     </style>
   </head>
   <body>
     <div class="container">
-        <h3><span style="font-weight: 400;">Domain : Orchestration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q1 : A global service is a service that runs&nbsp; ____&nbsp; task/tasks on every node that meet the placement and resource constraints</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Many</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>One</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>more than one</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>None</span></p>
+        <h3><span class="texto">Domain : Orchestration</span></h3>
+        <h4><em><span class="texto">Q1 : A global service is a service that runs&nbsp; ____&nbsp; task/tasks on every node that meet the placement and resource constraints</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Many</span><br>
+        <span class="texto"><strong>B. </strong>One</span><br>
+        <span class="texto"><strong>C. </strong>more than one</span><br>
+        <span class="texto"><strong>D. </strong>None</span></p>
         <div class="oculta">
             <p><b>Correct Answer: B</b></p>
             <p><b>Explanation</b></p>
@@ -20,98 +21,98 @@
             <b>Option B is correct</b><br>
             <b>Option C is incorrect</b><br>
             <b>Option D is incorrect</b></p>
-            <p><b>Reference:</b><a href="https://docs.docker.com/engine/swarm/services/#replicated-or-global-services" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/services/#replicated-or-global-services', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">https://docs.docker.com/engine/swarm/services/#replicated-or-global-services</span></a></p>
+            <p><b>Reference:</b><a href="https://docs.docker.com/engine/swarm/services/#replicated-or-global-services" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/services/#replicated-or-global-services', '_blank', 'noopener'); return false;"> <span class="texto">https://docs.docker.com/engine/swarm/services/#replicated-or-global-services</span></a></p>
             <p>&nbsp;</p>
         </div>
-        <h3><span style="font-weight: 400;">Domain : Orchestration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q2 : Your company needs to run a custom monitoring application published in Docker Hub called “examplecorp/stats-collector”. You must ensure this would run in all swarm nodes, regardless how many nodes you currently have or if a new one would join the swarm eventually. This monitoring system requires an environment variable called ENDPOINT_ADDRESS that sends the metrics to an external service hosted at ‘service.example.com’. Which of the following commands would accomplish these requirements?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>docker service create –name stats-collector –replicas=1 –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>docker service create –name stats-collector –replicas=auto –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>docker service create –name stats-collector –mode=global -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>docker service create –name stats-collector –mode=replicated -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span></p>
+        <h3><span class="texto">Domain : Orchestration</span></h3>
+        <h4><em><span class="texto">Q2 : Your company needs to run a custom monitoring application published in Docker Hub called “examplecorp/stats-collector”. You must ensure this would run in all swarm nodes, regardless how many nodes you currently have or if a new one would join the swarm eventually. This monitoring system requires an environment variable called ENDPOINT_ADDRESS that sends the metrics to an external service hosted at ‘service.example.com’. Which of the following commands would accomplish these requirements?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>docker service create –name stats-collector –replicas=1 –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
+        <span class="texto"><strong>B. </strong>docker service create –name stats-collector –replicas=auto –entrypoint ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
+        <span class="texto"><strong>C. </strong>docker service create –name stats-collector –mode=global -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span><br>
+        <span class="texto"><strong>D. </strong>docker service create –name stats-collector –mode=replicated -e ENDPOINT_ADDRESS=”service.example.com” examplecorp/stats-collector</span></p>
         <div class="oculta">
             <p><b>Correct Answer: C</b></p>
             <p><b>Explanation</b></p>
-            <p><span style="font-weight: 400;">A is incorrect because this would only bring one task (container) up in one random node in the swarm. Another issue is that –entrypoint option would make the container to exec ADDRESS=”service.example.com”, which would make the service creation fails in the end.</span></p>
-            <p><b>B is incorrect </b><span style="font-weight: 400;">because you cannot specify ‘auto’ as a number of replicas. It must be a number always. Another issue is that –entrypoint option would make the container to exec ADDRESS=”service.example.com”, which would make the service creation fails in the end.</span><br>
-            <b>C is correct.</b><span style="font-weight: 400;"> The service must run as ‘global’, because it will create one task in each swarm node, even if a new node joins the swarm. The -e is the correct option to specify a custom environment variable to the container.</span><br>
-            <b>D is wrong.</b><span style="font-weight: 400;"> Not only this is the default mode, but eventually will create just only one container in the entire swarm. The questions asks that we need to run this in all nodes. The -e is the correct option to specify a custom environment variable to the container.</span></p>
-            <p><b>Reference:</b><a href="https://docs.docker.com/engine/reference/commandline/service_create/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/service_create/', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">https://docs.docker.com/engine/reference/commandline/service_create/</span></a></p>
+            <p><span class="texto">A is incorrect because this would only bring one task (container) up in one random node in the swarm. Another issue is that –entrypoint option would make the container to exec ADDRESS=”service.example.com”, which would make the service creation fails in the end.</span></p>
+            <p><b>B is incorrect </b><span class="texto">because you cannot specify ‘auto’ as a number of replicas. It must be a number always. Another issue is that –entrypoint option would make the container to exec ADDRESS=”service.example.com”, which would make the service creation fails in the end.</span><br>
+            <b>C is correct.</b><span class="texto"> The service must run as ‘global’, because it will create one task in each swarm node, even if a new node joins the swarm. The -e is the correct option to specify a custom environment variable to the container.</span><br>
+            <b>D is wrong.</b><span class="texto"> Not only this is the default mode, but eventually will create just only one container in the entire swarm. The questions asks that we need to run this in all nodes. The -e is the correct option to specify a custom environment variable to the container.</span></p>
+            <p><b>Reference:</b><a href="https://docs.docker.com/engine/reference/commandline/service_create/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/service_create/', '_blank', 'noopener'); return false;"> <span class="texto">https://docs.docker.com/engine/reference/commandline/service_create/</span></a></p>
             <p>&nbsp;</p>
         </div>
-        <h3><span style="font-weight: 400;">Domain : Orchestration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q3 : Which of the following is NOT true regarding docker swarm mode?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>You can deploy both kinds of nodes, managers and workers, using the Docker Engine</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>For each service, you can declare the number of tasks you want to run. When you scale up or down, the swarm manager automatically adapts by adding or removing tasks to maintain the desired state.</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>The swarm manager automatically assigns addresses to the containers on the overlay network when it initializes or updates the application.</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Docker swarm mode is a plugin which you can install alongside docker to&nbsp; run a cluster of docker engines</span></p>
+        <h3><span class="texto">Domain : Orchestration</span></h3>
+        <h4><em><span class="texto">Q3 : Which of the following is NOT true regarding docker swarm mode?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>You can deploy both kinds of nodes, managers and workers, using the Docker Engine</span><br>
+        <span class="texto"><strong>B. </strong>For each service, you can declare the number of tasks you want to run. When you scale up or down, the swarm manager automatically adapts by adding or removing tasks to maintain the desired state.</span><br>
+        <span class="texto"><strong>C. </strong>The swarm manager automatically assigns addresses to the containers on the overlay network when it initializes or updates the application.</span><br>
+        <span class="texto"><strong>D. </strong>Docker swarm mode is a plugin which you can install alongside docker to&nbsp; run a cluster of docker engines</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: D</b></p>
         <p><b>Explanation</b></p>
         <ol>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">This is correct</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">This is correct</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">This is correct</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">a,b and c all are correct – so the only incorrect option is this.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">This is correct</span></li>
+        <li class="texto" aria-level="1"><span class="texto">This is correct</span></li>
+        <li class="texto" aria-level="1"><span class="texto">This is correct</span></li>
+        <li class="texto" aria-level="1"><span class="texto">a,b and c all are correct – so the only incorrect option is this.</span></li>
         </ol>
-        <p><span style="font-weight: 400;">Docker swarm mode is not a plugin. It is built into docker engine. A basic docker installation can be run in swarm mode, it doesn’t require any plugin.</span></p>
-        <p><span style="font-weight: 400;">Each node in the swarm enforces TLS mutual authentication and encryption to secure communications between itself and all other nodes </span><a href="https://docs.docker.com/engine/swarm/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/engine/swarm/</span></a></p>
+        <p><span class="texto">Docker swarm mode is not a plugin. It is built into docker engine. A basic docker installation can be run in swarm mode, it doesn’t require any plugin.</span></p>
+        <p><span class="texto">Each node in the swarm enforces TLS mutual authentication and encryption to secure communications between itself and all other nodes </span><a href="https://docs.docker.com/engine/swarm/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/engine/swarm/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Image Creation, Management, and Registry</span></h3>
-        <h4><em><span style="font-weight: 400;">Q4 : Which of the following patterns would exclude all Python byte-code files from being copied during the Docker image creation process?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>**.pyc</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>**/*.pyc</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>*.pyc</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>/*.pyc</span></p>
+        <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
+        <h4><em><span class="texto">Q4 : Which of the following patterns would exclude all Python byte-code files from being copied during the Docker image creation process?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>**.pyc</span><br>
+        <span class="texto"><strong>B. </strong>**/*.pyc</span><br>
+        <span class="texto"><strong>C. </strong>*.pyc</span><br>
+        <span class="texto"><strong>D. </strong>/*.pyc</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
         <p><b>Explanation</b></p>
         <p><b>The correct answer is Option B</b></p>
-        <p><b>References:</b> <a href="https://docs.docker.com/engine/reference/builder" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/builder', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/engine/reference/builder</span></a>, <a href="https://codefresh.io/docker-tutorial/not-ignore-dockerignore/" rel="noopener" onclick="javascript:window.open('https://codefresh.io/docker-tutorial/not-ignore-dockerignore/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://codefresh.io/docker-tutorial/not-ignore-dockerignore/</span></a></p>
-        <p><span style="font-weight: 400;">Beyond Go’s filepath.Match rules, Docker also supports a special wildcard string ** that matches any number of directories (including zero). For example, **/*.go will exclude all files that end with .go that are found in all directories, including the root of the build context.</span></p>
+        <p><b>References:</b> <a href="https://docs.docker.com/engine/reference/builder" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/builder', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/engine/reference/builder</span></a>, <a href="https://codefresh.io/docker-tutorial/not-ignore-dockerignore/" rel="noopener" onclick="javascript:window.open('https://codefresh.io/docker-tutorial/not-ignore-dockerignore/', '_blank', 'noopener'); return false;"><span class="texto">https://codefresh.io/docker-tutorial/not-ignore-dockerignore/</span></a></p>
+        <p><span class="texto">Beyond Go’s filepath.Match rules, Docker also supports a special wildcard string ** that matches any number of directories (including zero). For example, **/*.go will exclude all files that end with .go that are found in all directories, including the root of the build context.</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Image Creation, Management, and Registry</span></h3>
+        <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
         <h4><em>Q5 : Which of the following statement is correct? Pick exactly two statements.</em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Image is a collection of immutable layers whereas container is a running instance of an image.</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Container can exist without the image but image cannot exist without container</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Only one container can be spawned from a given image at a time</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>If multiple containers are spawned from the same image then they all use the same copy of image in memory.</span></p>
+        <p><span class="texto"><strong>A. </strong>Image is a collection of immutable layers whereas container is a running instance of an image.</span><br>
+        <span class="texto"><strong>B. </strong>Container can exist without the image but image cannot exist without container</span><br>
+        <span class="texto"><strong>C. </strong>Only one container can be spawned from a given image at a time</span><br>
+        <span class="texto"><strong>D. </strong>If multiple containers are spawned from the same image then they all use the same copy of image in memory.</span></p>
 <div class="oculta">
         <p><b>Correct Answers: A and D</b></p>
         <p><b>Explanation</b></p>
-        <p><b>Option A is correct.</b><span style="font-weight: 400;"> Image consists of layers which are immutable. Container is a running instance of an image.</span><br>
-        <b>Option B is incorrect</b><span style="font-weight: 400;"> because containers cannot exist without an image. We can spawn a container using an image.</span><br>
-        <b>Option C is incorrect </b><span style="font-weight: 400;">because we can spawn multiple containers from a single image.</span><br>
-        <b>Option D is correct </b><span style="font-weight: 400;">because when we spawn multiple containers from a same image – only a single copy of the image is loaded on memory. Each container has its own Read and Write layer to accommodate its local changes.</span></p>
-        <p><b>Reference: </b><a href="https://docs.docker.com/glossary/?term=image" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/glossary/?term=image', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/glossary/?term=image</span></a></p>
+        <p><b>Option A is correct.</b><span class="texto"> Image consists of layers which are immutable. Container is a running instance of an image.</span><br>
+        <b>Option B is incorrect</b><span class="texto"> because containers cannot exist without an image. We can spawn a container using an image.</span><br>
+        <b>Option C is incorrect </b><span class="texto">because we can spawn multiple containers from a single image.</span><br>
+        <b>Option D is correct </b><span class="texto">because when we spawn multiple containers from a same image – only a single copy of the image is loaded on memory. Each container has its own Read and Write layer to accommodate its local changes.</span></p>
+        <p><b>Reference: </b><a href="https://docs.docker.com/glossary/?term=image" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/glossary/?term=image', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/glossary/?term=image</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Image Creation, Management, and Registry</span></h3>
-        <h4><em><span style="font-weight: 400;">Q6 : You are in a directory containing a file named Dockerfile-app. You want to build a docker image using this “Dockerfile-app” file without renaming it to “Dockerfile”. Which of the following answers is correct?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>docker build -d Dockerfile-app</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>docker build -f Dockerfile-app</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>docker build –dockerfile Dockerfile-app</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>docker build –from-file Dockerfile-app</span></p>
+        <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
+        <h4><em><span class="texto">Q6 : You are in a directory containing a file named Dockerfile-app. You want to build a docker image using this “Dockerfile-app” file without renaming it to “Dockerfile”. Which of the following answers is correct?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>docker build -d Dockerfile-app</span><br>
+        <span class="texto"><strong>B. </strong>docker build -f Dockerfile-app</span><br>
+        <span class="texto"><strong>C. </strong>docker build –dockerfile Dockerfile-app</span><br>
+        <span class="texto"><strong>D. </strong>docker build –from-file Dockerfile-app</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B&nbsp;</b></p>
         <p><b>Explanation</b></p>
         <ol>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Invalid flag.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">“-f” is a valid flag for providing Dockerfile</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Invalid flag.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Invalid flag.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">Invalid flag.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">“-f” is a valid flag for providing Dockerfile</span></li>
+        <li class="texto" aria-level="1"><span class="texto">Invalid flag.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">Invalid flag.</span></li>
         </ol>
-        <p><span style="font-weight: 400;">Docker provides argument “-f” to use Dockerfile to build the image. </span><a href="https://docs.docker.com/engine/reference/commandline/build/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/build/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/engine/reference/commandline/build/</span></a></p>
+        <p><span class="texto">Docker provides argument “-f” to use Dockerfile to build the image. </span><a href="https://docs.docker.com/engine/reference/commandline/build/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/build/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/engine/reference/commandline/build/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Installation and Configuration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q7 : Bob did a fresh installation of docker on his new linux server. He hasn’t tinkered with anything and has just installed docker packages from official repository. He runs a new container with command “docker run -d nginx” , which logging driver will this container use?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Syslog</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Logentries</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Json-file</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Journald</span></p>
+        <h3><span class="texto">Domain : Installation and Configuration</span></h3>
+        <h4><em><span class="texto">Q7 : Bob did a fresh installation of docker on his new linux server. He hasn’t tinkered with anything and has just installed docker packages from official repository. He runs a new container with command “docker run -d nginx” , which logging driver will this container use?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Syslog</span><br>
+        <span class="texto"><strong>B. </strong>Logentries</span><br>
+        <span class="texto"><strong>C. </strong>Json-file</span><br>
+        <span class="texto"><strong>D. </strong>Journald</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -119,33 +120,33 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is correct</b><br>
         <b>Option D is incorrect</b></p>
-        <p><span style="font-weight: 400;">json-file is the default logging driver in docker</span></p>
+        <p><span class="texto">json-file is the default logging driver in docker</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Installation and Configuration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q8 : Which of the following gives a web dashboard to manage docker cluster?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Docker swarm mode</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Docker UCP</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Docker-compose</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>DTR</span></p>
+        <h3><span class="texto">Domain : Installation and Configuration</span></h3>
+        <h4><em><span class="texto">Q8 : Which of the following gives a web dashboard to manage docker cluster?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Docker swarm mode</span><br>
+        <span class="texto"><strong>B. </strong>Docker UCP</span><br>
+        <span class="texto"><strong>C. </strong>Docker-compose</span><br>
+        <span class="texto"><strong>D. </strong>DTR</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
         <p><b>Explanation</b></p>
         <ol>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">docker swarm mode is used for creating docker cluster</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Docker UCP is the a docker enterprise software which comes bundled with a web dashboard and cli for managing docker swarm effectively.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">docker-compose is used for running/managing docker services in single docker host.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Docker Trusted Registry (DTR) is the enterprise-grade image storage solution from Docker.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">docker swarm mode is used for creating docker cluster</span></li>
+        <li class="texto" aria-level="1"><span class="texto">Docker UCP is the a docker enterprise software which comes bundled with a web dashboard and cli for managing docker swarm effectively.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">docker-compose is used for running/managing docker services in single docker host.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">Docker Trusted Registry (DTR) is the enterprise-grade image storage solution from Docker.</span></li>
         </ol>
-        <p><span style="font-weight: 400;">UCP provides us with a single web based dashboard to manage/maintain docker cluster.</span></p>
+        <p><span class="texto">UCP provides us with a single web based dashboard to manage/maintain docker cluster.</span></p>
         <p>&nbsp;</p>
 </div>
-        <h3><span style="font-weight: 400;">Domain : Networking</span></h3>
-        <h4><em><span style="font-weight: 400;">Q9 : Bob runs a container with –net=host, which of the following will NOT true? There are already multiple containers running on the host.</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>The container will use host network namespace and the network interfaces and IP stack of the host.</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>All containers in the host network are able to communicate with each other on the host interfaces.</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Because they are using the host networking namespace, two containers are able to bind to the same TCP port.</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>From a networking standpoint this is equivalent to multiple processes running on a host without containers.</span></p>
+        <h3><span class="texto">Domain : Networking</span></h3>
+        <h4><em><span class="texto">Q9 : Bob runs a container with –net=host, which of the following will NOT true? There are already multiple containers running on the host.</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>The container will use host network namespace and the network interfaces and IP stack of the host.</span><br>
+        <span class="texto"><strong>B. </strong>All containers in the host network are able to communicate with each other on the host interfaces.</span><br>
+        <span class="texto"><strong>C. </strong>Because they are using the host networking namespace, two containers are able to bind to the same TCP port.</span><br>
+        <span class="texto"><strong>D. </strong>From a networking standpoint this is equivalent to multiple processes running on a host without containers.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -153,17 +154,17 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is correct</b><br>
         <b>Option D is incorrect</b></p>
-        <p><span style="font-weight: 400;">Any two processes running on same networking namespace can’t bind to the same port. This holds true for host networking namespace as well. That’s why Option C is a false statement.</span></p>
-        <p><b>Reference:</b><a href="https://success.docker.com/article/networking" rel="noopener" onclick="javascript:window.open('https://success.docker.com/article/networking', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">https://success.docker.com/article/networking</span></a></p>
+        <p><span class="texto">Any two processes running on same networking namespace can’t bind to the same port. This holds true for host networking namespace as well. That’s why Option C is a false statement.</span></p>
+        <p><b>Reference:</b><a href="https://success.docker.com/article/networking" rel="noopener" onclick="javascript:window.open('https://success.docker.com/article/networking', '_blank', 'noopener'); return false;"> <span class="texto">https://success.docker.com/article/networking</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Security</span></h3>
-        <h4><em><span style="font-weight: 400;">Q10 : Grants in UCP are made up of which of the following?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>subject, role and resource set</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>subject, role and containers</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>nodes, role and containers</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>subject, node and containers</span><br>
-        <span style="font-weight: 400;"><strong>E. </strong>images, containers and nodes</span></p>
+        <h3><span class="texto">Domain : Security</span></h3>
+        <h4><em><span class="texto">Q10 : Grants in UCP are made up of which of the following?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>subject, role and resource set</span><br>
+        <span class="texto"><strong>B. </strong>subject, role and containers</span><br>
+        <span class="texto"><strong>C. </strong>nodes, role and containers</span><br>
+        <span class="texto"><strong>D. </strong>subject, node and containers</span><br>
+        <span class="texto"><strong>E. </strong>images, containers and nodes</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
@@ -171,33 +172,33 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is incorrect</b><br>
         <b>Option D is incorrect</b></p>
-        <p><span style="font-weight: 400;">A grant is made up of subject, role, and resource set.</span></p>
-        <p><span style="font-weight: 400;">Grants define which users can access what resources in what way. Grants are effectively Access Control Lists (ACLs), and when grouped together, they provide comprehensive access policies for an entire organization.</span></p>
-        <p><span style="font-weight: 400;">Only an administrator can manage grants, subjects, roles, and access to resources.</span></p>
+        <p><span class="texto">A grant is made up of subject, role, and resource set.</span></p>
+        <p><span class="texto">Grants define which users can access what resources in what way. Grants are effectively Access Control Lists (ACLs), and when grouped together, they provide comprehensive access policies for an entire organization.</span></p>
+        <p><span class="texto">Only an administrator can manage grants, subjects, roles, and access to resources.</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Security</span></h3>
-        <h4><em><span style="font-weight: 400;">Q11 : Which of the following is </span><b>NOT</b><span style="font-weight: 400;"> true about selinux ?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>SELinux= Security-Enhanced Linux</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>SELinux provides a mechanism for supporting</span><a href="https://en.wikipedia.org/wiki/Access_control" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Access_control', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">access control</span></a><span style="font-weight: 400;"> security policies</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>SELinux comes bundled with docker</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>SELinux is a set of kernel modifications and user-space tools that have been added to various</span><a href="https://en.wikipedia.org/wiki/Linux_distribution" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Linux_distribution', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">Linux distributions</span></a><span style="font-weight: 400;">.</span></p>
+        <h3><span class="texto">Domain : Security</span></h3>
+        <h4><em><span class="texto">Q11 : Which of the following is </span><b>NOT</b><span class="texto"> true about selinux ?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>SELinux= Security-Enhanced Linux</span><br>
+        <span class="texto"><strong>B. </strong>SELinux provides a mechanism for supporting</span><a href="https://en.wikipedia.org/wiki/Access_control" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Access_control', '_blank', 'noopener'); return false;"> <span class="texto">access control</span></a><span class="texto"> security policies</span><br>
+        <span class="texto"><strong>C. </strong>SELinux comes bundled with docker</span><br>
+        <span class="texto"><strong>D. </strong>SELinux is a set of kernel modifications and user-space tools that have been added to various</span><a href="https://en.wikipedia.org/wiki/Linux_distribution" rel="noopener" onclick="javascript:window.open('https://en.wikipedia.org/wiki/Linux_distribution', '_blank', 'noopener'); return false;"> <span class="texto">Linux distributions</span></a><span class="texto">.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
-        <p><b>Option A is incorrect </b><span style="font-weight: 400;">because its a true statement</span><br>
-        <b>Option B is incorrect </b><span style="font-weight: 400;">because its a true statement</span><br>
+        <p><b>Option A is incorrect </b><span class="texto">because its a true statement</span><br>
+        <b>Option B is incorrect </b><span class="texto">because its a true statement</span><br>
         <b>Option C is correct</b><br>
-        <b>Option D is incorrect</b><span style="font-weight: 400;"> because its a true statement</span></p>
-        <p><span style="font-weight: 400;">SELinux is independent of docker. Docker is compatible with SELinux though.</span></p>
+        <b>Option D is incorrect</b><span class="texto"> because its a true statement</span></p>
+        <p><span class="texto">SELinux is independent of docker. Docker is compatible with SELinux though.</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Storage and Volumes</span></h3>
-        <h4><em><span style="font-weight: 400;">Q12 : Bob wants to update the secret being used by one of his service. What is the correct sequence of actions to be performed by him?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Update the existing secret using docker secret update</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Update the existing secret , restart all the services using this secret</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Create a new secret, update the service to use this new secret , delete the old secret</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Create a new secret, create a new service with this new secret, delete old secret and old service</span></p>
+        <h3><span class="texto">Domain : Storage and Volumes</span></h3>
+        <h4><em><span class="texto">Q12 : Bob wants to update the secret being used by one of his service. What is the correct sequence of actions to be performed by him?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Update the existing secret using docker secret update</span><br>
+        <span class="texto"><strong>B. </strong>Update the existing secret , restart all the services using this secret</span><br>
+        <span class="texto"><strong>C. </strong>Create a new secret, update the service to use this new secret , delete the old secret</span><br>
+        <span class="texto"><strong>D. </strong>Create a new secret, create a new service with this new secret, delete old secret and old service</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -205,35 +206,35 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is correct</b><br>
         <b>Option D is incorrect</b></p>
-        <p><span style="font-weight: 400;">Secrets are immutable in docker swarm. This means they cannot be modified. So if you want to make any modification to a secret then you have to create a new secret file.</span></p>
-        <p><span style="font-weight: 400;">Having said that, the current sequence for updating a secret is – to first create a new secret (because we can’t update an existing one), attach the new secret to the service by updating the service – (this would require the service to restart – docker swarm would take care of that) and then delete the old secret.</span></p>
+        <p><span class="texto">Secrets are immutable in docker swarm. This means they cannot be modified. So if you want to make any modification to a secret then you have to create a new secret file.</span></p>
+        <p><span class="texto">Having said that, the current sequence for updating a secret is – to first create a new secret (because we can’t update an existing one), attach the new secret to the service by updating the service – (this would require the service to restart – docker swarm would take care of that) and then delete the old secret.</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Orchestration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q13 : Bob is running a docker swarm cluster with multiple manager nodes. Bob needs to remove one the manager nodes from the cluster permanently. Bob has access to this manager node. What is the safest way for him to remove a manager node from the cluster?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Simply shut down the server and let the Raft quorum decides to remove it permanently from the swarm.</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Run “docker swarm leave” on the specific node.</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Firstly demote the manager node to a worker and then remove it using “docker swarm leave”</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Stop the docker service on this specific manager node. Wait until its status change to ‘Unreachable’ by checking the status on another manager node. Once it disappears from the list of manager nodes, you can safely shut down this node.</span></p>
+        <h3><span class="texto">Domain : Orchestration</span></h3>
+        <h4><em><span class="texto">Q13 : Bob is running a docker swarm cluster with multiple manager nodes. Bob needs to remove one the manager nodes from the cluster permanently. Bob has access to this manager node. What is the safest way for him to remove a manager node from the cluster?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Simply shut down the server and let the Raft quorum decides to remove it permanently from the swarm.</span><br>
+        <span class="texto"><strong>B. </strong>Run “docker swarm leave” on the specific node.</span><br>
+        <span class="texto"><strong>C. </strong>Firstly demote the manager node to a worker and then remove it using “docker swarm leave”</span><br>
+        <span class="texto"><strong>D. </strong>Stop the docker service on this specific manager node. Wait until its status change to ‘Unreachable’ by checking the status on another manager node. Once it disappears from the list of manager nodes, you can safely shut down this node.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
         <p><b>Option A is incorrect</b><br>
         <b>Option B is incorrect</b><br>
         <b>Option C is correct</b><br>
-        <b>A is incorrect</b><span style="font-weight: 400;"> because the purpose of a raft quorum is to decide which manager node is a leader. The manager will still show as ‘active’ in the swarm, but the manager status will be ‘Unreachable’</span><br>
-        <b>B is incorrect</b><span style="font-weight: 400;"> because only a worker node can leave a swarm with no restriction. If a manager node tries to leave a swarm, the command will fail because it will state you are a manager. Therefore you must demote this node to a worker so the swarm and them you can leave the swarm as a worker. If the current manager is the leader, it will successfully auto-demote itself and the raft quorum will decide which manager node will be the new leader.&nbsp;&nbsp;</span><br>
-        <b>C is correct</b><span style="font-weight: 400;"> because this is the correct and safest way to remove a manager from a swarm.</span><br>
-        <b>D is incorrect</b><span style="font-weight: 400;"> because the manager will still show as ‘active’ in the swarm, but the manager status will be ‘Unreachable’.</span></p>
-        <p><b>Reference: </b><a href="https://docs.docker.com/engine/reference/commandline/swarm_leave/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/swarm_leave/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/engine/reference/commandline/swarm_leave/</span></a></p>
+        <b>A is incorrect</b><span class="texto"> because the purpose of a raft quorum is to decide which manager node is a leader. The manager will still show as ‘active’ in the swarm, but the manager status will be ‘Unreachable’</span><br>
+        <b>B is incorrect</b><span class="texto"> because only a worker node can leave a swarm with no restriction. If a manager node tries to leave a swarm, the command will fail because it will state you are a manager. Therefore you must demote this node to a worker so the swarm and them you can leave the swarm as a worker. If the current manager is the leader, it will successfully auto-demote itself and the raft quorum will decide which manager node will be the new leader.&nbsp;&nbsp;</span><br>
+        <b>C is correct</b><span class="texto"> because this is the correct and safest way to remove a manager from a swarm.</span><br>
+        <b>D is incorrect</b><span class="texto"> because the manager will still show as ‘active’ in the swarm, but the manager status will be ‘Unreachable’.</span></p>
+        <p><b>Reference: </b><a href="https://docs.docker.com/engine/reference/commandline/swarm_leave/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/swarm_leave/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/engine/reference/commandline/swarm_leave/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Orchestration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q14 : DCT stands for?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Docker Content Transmission</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Docker Container Transmission</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Docker Certificate Trust</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Docker Content Trust</span></p>
+        <h3><span class="texto">Domain : Orchestration</span></h3>
+        <h4><em><span class="texto">Q14 : DCT stands for?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Docker Content Transmission</span><br>
+        <span class="texto"><strong>B. </strong>Docker Container Transmission</span><br>
+        <span class="texto"><strong>C. </strong>Docker Certificate Trust</span><br>
+        <span class="texto"><strong>D. </strong>Docker Content Trust</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: D</b></p>
         <p><b>Explanation</b></p>
@@ -241,82 +242,82 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is incorrect</b><br>
         <b>Option D is correct</b></p>
-        <p><span style="font-weight: 400;">Points regarding locking docker swarm</span></p>
+        <p><span class="texto">Points regarding locking docker swarm</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Orchestration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q15 : Which of the following options are available to run a single container?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>published port, user, log driver, restart policy</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>published port, user, log driver, placement constraints</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>published port, volume, secrets, log driver</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>volume, secrets, log driver, memory limit</span></p>
+        <h3><span class="texto">Domain : Orchestration</span></h3>
+        <h4><em><span class="texto">Q15 : Which of the following options are available to run a single container?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>published port, user, log driver, restart policy</span><br>
+        <span class="texto"><strong>B. </strong>published port, user, log driver, placement constraints</span><br>
+        <span class="texto"><strong>C. </strong>published port, volume, secrets, log driver</span><br>
+        <span class="texto"><strong>D. </strong>volume, secrets, log driver, memory limit</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
         <p><b>Option A is correct</b><br>
-        <b>Option B is incorrect </b><span style="font-weight: 400;">because we can’t specify placement constraints while running a single container. Placement constraints can be specified while running a service.</span><br>
-        <b>Option C is incorrect</b><span style="font-weight: 400;"> because we can’t specify secrets while running a single container</span><br>
-        <b>Option D is incorrect</b><span style="font-weight: 400;"> because we can’t specify secrets while running a container.</span></p>
-        <p><b>SOURCE:</b><a href="https://docs.docker.com/engine/reference/commandline/container_run/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/container_run/', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">https://docs.docker.com/engine/reference/commandline/container_run/</span></a></p>
-        <p><span style="font-weight: 400;">Regarding to secrets, it is only available on the Docker Swarm and you cannot create a secret on a lone docker execution, only if it part of a service.</span></p>
-        <p><b>SOURCE:</b><a href="https://docs.docker.com/engine/swarm/secrets/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/secrets/', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">https://docs.docker.com/engine/swarm/secrets/</span></a></p>
+        <b>Option B is incorrect </b><span class="texto">because we can’t specify placement constraints while running a single container. Placement constraints can be specified while running a service.</span><br>
+        <b>Option C is incorrect</b><span class="texto"> because we can’t specify secrets while running a single container</span><br>
+        <b>Option D is incorrect</b><span class="texto"> because we can’t specify secrets while running a container.</span></p>
+        <p><b>SOURCE:</b><a href="https://docs.docker.com/engine/reference/commandline/container_run/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/container_run/', '_blank', 'noopener'); return false;"> <span class="texto">https://docs.docker.com/engine/reference/commandline/container_run/</span></a></p>
+        <p><span class="texto">Regarding to secrets, it is only available on the Docker Swarm and you cannot create a secret on a lone docker execution, only if it part of a service.</span></p>
+        <p><b>SOURCE:</b><a href="https://docs.docker.com/engine/swarm/secrets/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/secrets/', '_blank', 'noopener'); return false;"> <span class="texto">https://docs.docker.com/engine/swarm/secrets/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Image Creation, Management, and Registry</span></h3>
-        <h4><em><span style="font-weight: 400;">Q16 : Docker image consists of _____ layers each of which represents a Dockerfile instruction. The layers are stacked and each one is a delta of the changes from the previous layer.</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>read and write</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>write only</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>read only</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Movable</span></p>
+        <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
+        <h4><em><span class="texto">Q16 : Docker image consists of _____ layers each of which represents a Dockerfile instruction. The layers are stacked and each one is a delta of the changes from the previous layer.</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>read and write</span><br>
+        <span class="texto"><strong>B. </strong>write only</span><br>
+        <span class="texto"><strong>C. </strong>read only</span><br>
+        <span class="texto"><strong>D. </strong>Movable</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
         <p><b>Option A is incorrect</b><br>
         <b>Option B is incorrect&nbsp;</b><br>
-        <b>Option C is correct</b><span style="font-weight: 400;"> because all the layers involved in making an image are read only</span><br>
-        <b>Option D is incorrect</b><span style="font-weight: 400;"> because there is no such thing as “movable” layers</span></p>
+        <b>Option C is correct</b><span class="texto"> because all the layers involved in making an image are read only</span><br>
+        <b>Option D is incorrect</b><span class="texto"> because there is no such thing as “movable” layers</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Image Creation, Management, and Registry</span></h3>
-        <h4><em><span style="font-weight: 400;">Q17 : Which of the following statements is NOT TRUE about multi-stage builds?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Multi-stage builds eliminates the need of separate Dockerfiles.</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Multi-stage builds helps on creation of smaller image sizes.</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>You cannot select which step you want to start your build process in a multi-stage build once you defined all steps.</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>With multi-stage builds, you can create images for different purposes, such as development and production.</span></p>
+        <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
+        <h4><em><span class="texto">Q17 : Which of the following statements is NOT TRUE about multi-stage builds?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Multi-stage builds eliminates the need of separate Dockerfiles.</span><br>
+        <span class="texto"><strong>B. </strong>Multi-stage builds helps on creation of smaller image sizes.</span><br>
+        <span class="texto"><strong>C. </strong>You cannot select which step you want to start your build process in a multi-stage build once you defined all steps.</span><br>
+        <span class="texto"><strong>D. </strong>With multi-stage builds, you can create images for different purposes, such as development and production.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
-        <p><b>Option A is true. </b><span style="font-weight: 400;">You don’t need to maintain different Dockerfile as before.</span><br>
-        <b>Option B is true. </b><span style="font-weight: 400;">You can create an image with the sole purpose to build a binary file and one for running a binary file, without the need of the compiler nor the development files.</span><br>
-        <b>Option C is wrong, </b><span style="font-weight: 400;">because you can select a target build stage.</span><br>
-        <b>Option D is correct,</b><span style="font-weight: 400;"> because you can declare diferrent images and then select which will be your target during the build stage.</span></p>
-        <p><b>Reference: </b><a href="https://docs.docker.com/develop/develop-images/multistage-build/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/develop/develop-images/multistage-build/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/develop/develop-images/multistage-build/</span></a></p>
+        <p><b>Option A is true. </b><span class="texto">You don’t need to maintain different Dockerfile as before.</span><br>
+        <b>Option B is true. </b><span class="texto">You can create an image with the sole purpose to build a binary file and one for running a binary file, without the need of the compiler nor the development files.</span><br>
+        <b>Option C is wrong, </b><span class="texto">because you can select a target build stage.</span><br>
+        <b>Option D is correct,</b><span class="texto"> because you can declare diferrent images and then select which will be your target during the build stage.</span></p>
+        <p><b>Reference: </b><a href="https://docs.docker.com/develop/develop-images/multistage-build/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/develop/develop-images/multistage-build/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/develop/develop-images/multistage-build/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Image Creation, Management, and Registry</span></h3>
-        <h4><em><span style="font-weight: 400;">Q18 : If we don’t specify a tag then by convention which tag is pulled while running docker pull command?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Production</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Staging</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Latest</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Master</span></p>
+        <h3><span class="texto">Domain : Image Creation, Management, and Registry</span></h3>
+        <h4><em><span class="texto">Q18 : If we don’t specify a tag then by convention which tag is pulled while running docker pull command?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Production</span><br>
+        <span class="texto"><strong>B. </strong>Staging</span><br>
+        <span class="texto"><strong>C. </strong>Latest</span><br>
+        <span class="texto"><strong>D. </strong>Master</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
         <ol>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">production tag can be manually created/specified but it is not auto generated.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">staging tag can be manually created/specified but it is not auto generated.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">This is the correct option. “latest” is the default tag.</span></li>
-        <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Image versions can be specified manually but it is not auto generated.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">production tag can be manually created/specified but it is not auto generated.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">staging tag can be manually created/specified but it is not auto generated.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">This is the correct option. “latest” is the default tag.</span></li>
+        <li class="texto" aria-level="1"><span class="texto">Image versions can be specified manually but it is not auto generated.</span></li>
         </ol>
-        <p><span style="font-weight: 400;">The default tag to pull is latest. </span><a href="https://docs.docker.com/engine/reference/commandline/pull/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/pull/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/engine/reference/commandline/pull/</span></a></p>
+        <p><span class="texto">The default tag to pull is latest. </span><a href="https://docs.docker.com/engine/reference/commandline/pull/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/pull/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/engine/reference/commandline/pull/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Installation and Configuration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q19 : What is the default location of secrets inside a Docker container?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>/run/secrets/</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>/secrets/</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>/var/run/</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>/var/secrets/</span></p>
+        <h3><span class="texto">Domain : Installation and Configuration</span></h3>
+        <h4><em><span class="texto">Q19 : What is the default location of secrets inside a Docker container?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>/run/secrets/</span><br>
+        <span class="texto"><strong>B. </strong>/secrets/</span><br>
+        <span class="texto"><strong>C. </strong>/var/run/</span><br>
+        <span class="texto"><strong>D. </strong>/var/secrets/</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
@@ -324,39 +325,39 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is incorrect</b><br>
         <b>Option D is incorrect</b></p>
-        <p><b>Reference: </b><a href="https://docs.docker.com/engine/swarm/secrets/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/secrets/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/engine/swarm/secrets/</span></a></p>
+        <p><b>Reference: </b><a href="https://docs.docker.com/engine/swarm/secrets/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/swarm/secrets/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/engine/swarm/secrets/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Installation and Configuration</span></h3>
-        <h4><em><span style="font-weight: 400;">Q20 : How do you setup the default logging driver on Docker daemon to be the syslog driver?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>On /etc/docker/daemon.yaml or C:\ProgramData\docker\config\daemon.yaml, just add:</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;log-driver: “syslog”</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>On /etc/docker/daemon.json or C:\ProgramData\docker\config\daemon.json, just add:</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; {</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;“log-driver”: “syslog”&nbsp;</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;}</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add:</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; {</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp; “log-driver”: “syslog”</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;}</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add: log-driver: “syslog”</span><br>
-        <span style="font-weight: 400;"><strong>E. </strong>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add: log-driver: “syslog”</span><br>
-        <span style="font-weight: 400;"><strong>F. </strong>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add:</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; {</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;“log-driver”: “syslog”</span><br>
-        <span style="font-weight: 400;">&nbsp; &nbsp; &nbsp;}</span></p>
+        <h3><span class="texto">Domain : Installation and Configuration</span></h3>
+        <h4><em><span class="texto">Q20 : How do you setup the default logging driver on Docker daemon to be the syslog driver?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>On /etc/docker/daemon.yaml or C:\ProgramData\docker\config\daemon.yaml, just add:</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp;log-driver: “syslog”</span><br>
+        <span class="texto"><strong>B. </strong>On /etc/docker/daemon.json or C:\ProgramData\docker\config\daemon.json, just add:</span><br>
+        <span class="texto">&nbsp; &nbsp; {</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp;“log-driver”: “syslog”&nbsp;</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp;}</span><br>
+        <span class="texto"><strong>C. </strong>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add:</span><br>
+        <span class="texto">&nbsp; &nbsp; {</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp; “log-driver”: “syslog”</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp;}</span><br>
+        <span class="texto"><strong>D. </strong>On /etc/docker/daemon.cfg or C:\ProgramData\docker\config\daemon.cfg, just add: log-driver: “syslog”</span><br>
+        <span class="texto"><strong>E. </strong>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add: log-driver: “syslog”</span><br>
+        <span class="texto"><strong>F. </strong>On /etc/docker/daemon.conf or C:\ProgramData\docker\config\daemon.conf, just add:</span><br>
+        <span class="texto">&nbsp; &nbsp; {</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp;“log-driver”: “syslog”</span><br>
+        <span class="texto">&nbsp; &nbsp; &nbsp;}</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
-        <p><b>Reference: </b><a href="https://docs.docker.com/config/containers/logging/configure/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/config/containers/logging/configure/', '_blank', 'noopener'); return false;"><span style="font-weight: 400;">https://docs.docker.com/config/containers/logging/configure/</span></a></p>
+        <p><b>Reference: </b><a href="https://docs.docker.com/config/containers/logging/configure/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/config/containers/logging/configure/', '_blank', 'noopener'); return false;"><span class="texto">https://docs.docker.com/config/containers/logging/configure/</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Networking</span></h3>
-        <h4><em><span style="font-weight: 400;">Q21 : Which of the following commands can be used to attach an existing network named ‘net1’ to a container ‘container1’ which is currently running in network named ‘net2’?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>docker network connect net1 net2 container1</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>docker network connect net1 container1</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>docker connect network net1 net2</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>docker connect network net1 container1</span><br>
-        <span style="font-weight: 400;"><strong>E. </strong>docker connect network net1 net2 container1</span></p>
+        <h3><span class="texto">Domain : Networking</span></h3>
+        <h4><em><span class="texto">Q21 : Which of the following commands can be used to attach an existing network named ‘net1’ to a container ‘container1’ which is currently running in network named ‘net2’?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>docker network connect net1 net2 container1</span><br>
+        <span class="texto"><strong>B. </strong>docker network connect net1 container1</span><br>
+        <span class="texto"><strong>C. </strong>docker connect network net1 net2</span><br>
+        <span class="texto"><strong>D. </strong>docker connect network net1 container1</span><br>
+        <span class="texto"><strong>E. </strong>docker connect network net1 net2 container1</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: B</b></p>
         <p><b>Explanation</b></p>
@@ -365,17 +366,17 @@
         <b>Option C is incorrect</b><br>
         <b>Option D is incorrect</b><br>
         <b>Option E is incorrect</b></p>
-        <p><span style="font-weight: 400;">container1 is currently part of network ‘net2’. To connect it to ‘net1’ we simply have to connect/attach it with network ‘net1’</span></p>
-        <p><span style="font-weight: 400;">‘docker network connect net1 container1’ should do what we want.</span></p>
-        <p><b>Reference:</b><a href="https://docs.docker.com/engine/reference/commandline/network_connect/#examples" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/network_connect/#examples', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">https://docs.docker.com/engine/reference/commandline/network_connect/#examples</span></a></p>
+        <p><span class="texto">container1 is currently part of network ‘net2’. To connect it to ‘net1’ we simply have to connect/attach it with network ‘net1’</span></p>
+        <p><span class="texto">‘docker network connect net1 container1’ should do what we want.</span></p>
+        <p><b>Reference:</b><a href="https://docs.docker.com/engine/reference/commandline/network_connect/#examples" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/engine/reference/commandline/network_connect/#examples', '_blank', 'noopener'); return false;"> <span class="texto">https://docs.docker.com/engine/reference/commandline/network_connect/#examples</span></a></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Networking</span></h3>
-        <h4><em><span style="font-weight: 400;">Q22 : Which of the following is a valid command to assign static IP to a container?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>docker run –static-ip 172.18.0.22 &lt;image&gt;</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>docker run –ip 172.18.0.22 &lt;image&gt;</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>None of the above</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>docker run –network-ip 172.18.0.22 &lt;image&gt;</span></p>
+        <h3><span class="texto">Domain : Networking</span></h3>
+        <h4><em><span class="texto">Q22 : Which of the following is a valid command to assign static IP to a container?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>docker run –static-ip 172.18.0.22 &lt;image&gt;</span><br>
+        <span class="texto"><strong>B. </strong>docker run –ip 172.18.0.22 &lt;image&gt;</span><br>
+        <span class="texto"><strong>C. </strong>None of the above</span><br>
+        <span class="texto"><strong>D. </strong>docker run –network-ip 172.18.0.22 &lt;image&gt;</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -383,34 +384,34 @@
         <b>Option B is incorrect</b><br>
         <b>Option C is correct</b><br>
         <b>Option D is incorrect</b></p>
-        <p><span style="font-weight: 400;">Static IP can be allocated only on a custom network. So first you will have to create a new network</span></p>
-        <p><span style="font-weight: 400;">docker network create –subnet=172.18.0.0/16 mynet123</span></p>
-        <p><span style="font-weight: 400;">And then run container with static IP</span></p>
-        <p><span style="font-weight: 400;">docker run –net mynet123 –ip 172.18.0.22 -it ubuntu bash</span></p>
+        <p><span class="texto">Static IP can be allocated only on a custom network. So first you will have to create a new network</span></p>
+        <p><span class="texto">docker network create –subnet=172.18.0.0/16 mynet123</span></p>
+        <p><span class="texto">And then run container with static IP</span></p>
+        <p><span class="texto">docker run –net mynet123 –ip 172.18.0.22 -it ubuntu bash</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Security</span></h3>
-        <h4><em><span style="font-weight: 400;">Q23 : Bob wants to test an untrusted docker image which has a bug due to which it starts consuming memory rapidly which causes other programs on the system to run out of </span></em><em><span style="font-weight: 400;">memory and crash. Bob wants to run the container and limit the max memory it can to be 512MB.</span></em><br>
-        <em><span style="font-weight: 400;">Which of the following can bob use while running a container to deal with this problem?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>docker run –limit 512m</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>docker run –limit 512</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>docker run -m 512m</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>docker run -m 512</span></p>
+        <h3><span class="texto">Domain : Security</span></h3>
+        <h4><em><span class="texto">Q23 : Bob wants to test an untrusted docker image which has a bug due to which it starts consuming memory rapidly which causes other programs on the system to run out of </span></em><em><span class="texto">memory and crash. Bob wants to run the container and limit the max memory it can to be 512MB.</span></em><br>
+        <em><span class="texto">Which of the following can bob use while running a container to deal with this problem?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>docker run –limit 512m</span><br>
+        <span class="texto"><strong>B. </strong>docker run –limit 512</span><br>
+        <span class="texto"><strong>C. </strong>docker run -m 512m</span><br>
+        <span class="texto"><strong>D. </strong>docker run -m 512</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
-        <p><b>Option A is incorrect </b><span style="font-weight: 400;">because –limit is not a valid flag</span><br>
-        <b>Option B is incorrect</b><span style="font-weight: 400;"> because –limit is not a valid flag</span><br>
+        <p><b>Option A is incorrect </b><span class="texto">because –limit is not a valid flag</span><br>
+        <b>Option B is incorrect</b><span class="texto"> because –limit is not a valid flag</span><br>
         <b>Option C is correct</b><br>
-        <b>Option D is incorrect </b><span style="font-weight: 400;">because -m 512 only assigns 512 bytes but bob wants to assign 512MB</span></p>
+        <b>Option D is incorrect </b><span class="texto">because -m 512 only assigns 512 bytes but bob wants to assign 512MB</span></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Security</span></h3>
-        <h4><em><span style="font-weight: 400;">Q24 : What is the recommended way of dealing with loss of root in in DCT?</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>Regenerate a new root key</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Sign existing user certs with a new root key</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>Contact docker support.</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Create a new DCT cluster</span></p>
+        <h3><span class="texto">Domain : Security</span></h3>
+        <h4><em><span class="texto">Q24 : What is the recommended way of dealing with loss of root in in DCT?</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>Regenerate a new root key</span><br>
+        <span class="texto"><strong>B. </strong>Sign existing user certs with a new root key</span><br>
+        <span class="texto"><strong>C. </strong>Contact docker support.</span><br>
+        <span class="texto"><strong>D. </strong>Create a new DCT cluster</span></p>
 <div class="oculta">        
         <p><b>Correct Answer: C</b></p>
         <p><b>Explanation</b></p>
@@ -420,21 +421,21 @@
         <b>Option D is incorrect</b></p>
         <p>&nbsp;</p>
 </div>        
-        <h3><span style="font-weight: 400;">Domain : Storage and Volumes</span></h3>
-        <h4><em><span style="font-weight: 400;">Q25 : Which of the following statements is NOT true?</span></em><br>
-        <em><span style="font-weight: 400;">By default all files created inside a container are stored on a writable container layer. This means that:</span></em></h4>
-        <p><span style="font-weight: 400;"><strong>A. </strong>The data persists when that container no longer exists</span><br>
-        <span style="font-weight: 400;"><strong>B. </strong>Two different containers can’t share the data present in their writable layer.</span><br>
-        <span style="font-weight: 400;"><strong>C. </strong>A container’s writable layer is tightly coupled to the host machine where the container is running. You can’t easily move the data somewhere else.</span><br>
-        <span style="font-weight: 400;"><strong>D. </strong>Writing into a container’s writable layer requires a</span><a href="https://docs.docker.com/storage/storagedriver/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/storage/storagedriver/', '_blank', 'noopener'); return false;"> <span style="font-weight: 400;">storage driver</span></a><span style="font-weight: 400;"> to manage the filesystem.</span></p>
+        <h3><span class="texto">Domain : Storage and Volumes</span></h3>
+        <h4><em><span class="texto">Q25 : Which of the following statements is NOT true?</span></em><br>
+        <em><span class="texto">By default all files created inside a container are stored on a writable container layer. This means that:</span></em></h4>
+        <p><span class="texto"><strong>A. </strong>The data persists when that container no longer exists</span><br>
+        <span class="texto"><strong>B. </strong>Two different containers can’t share the data present in their writable layer.</span><br>
+        <span class="texto"><strong>C. </strong>A container’s writable layer is tightly coupled to the host machine where the container is running. You can’t easily move the data somewhere else.</span><br>
+        <span class="texto"><strong>D. </strong>Writing into a container’s writable layer requires a</span><a href="https://docs.docker.com/storage/storagedriver/" rel="noopener" onclick="javascript:window.open('https://docs.docker.com/storage/storagedriver/', '_blank', 'noopener'); return false;"> <span class="texto">storage driver</span></a><span class="texto"> to manage the filesystem.</span></p>
 <div class="oculta">
         <p><b>Correct Answer: A</b></p>
         <p><b>Explanation</b></p>
         <p><b>Option A is correct</b><br>
-        <b>Option B is incorrect</b><span style="font-weight: 400;"> because its a true statement. Containers writable layers are separated using different mount namespaces and hence they can’t share it.</span><br>
-        <b>Option C is incorrect</b><span style="font-weight: 400;"> because it’s a true statement</span><br>
-        <b>Option D is incorrect</b><span style="font-weight: 400;"> because it’s a true statement</span></p>
-        <p><span style="font-weight: 400;">When a container is deleted – all data present in it’s writable layer is also lost. To prevent this data loss we can use volumes.</span></p>  
+        <b>Option B is incorrect</b><span class="texto"> because its a true statement. Containers writable layers are separated using different mount namespaces and hence they can’t share it.</span><br>
+        <b>Option C is incorrect</b><span class="texto"> because it’s a true statement</span><br>
+        <b>Option D is incorrect</b><span class="texto"> because it’s a true statement</span></p>
+        <p><span class="texto">When a container is deleted – all data present in it’s writable layer is also lost. To prevent this data loss we can use volumes.</span></p>  
 </div>        
     </div>
   </body>
