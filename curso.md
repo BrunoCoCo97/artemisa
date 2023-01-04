@@ -30,4 +30,19 @@ En el dia a dia de nuestro quehacer, recibimos archivos con estructura HTML de m
 
 El "nombre" de nuestra organización se llama "nombre de dominio" e identifica a un sitio de manera única en todo el mundo. Actualmente hay mas de 360 millones de nombres de dominio registrados en internet. Un nombre de dominio puede ser adquirido por tan sólo unos cuantos dólares al año. Con el tiempo y gracias a su contenido, los nombres de dominio suben de valor. Actualmente hay nombres de dominio que valen una fortuna. Por ejemplo, el sitio cars.com fué vendido en 872 millones de dólares en el año de 2017.
 
+Un nombre de dominio "por si solo" no sirve para nada. Una vez adquirido, es necesario "que apunte" a una máquina que tendrá contenido (es decir, páginas como la primera que mostramos) que sea de interés al público mundial. El procedimiento para que un dominio "apunte" a una máquina con contenido es relativamente sencillo: 
+
+- Se le indica al vendedor de dominios (también conocido como "registrar") quiénes son los servidores de nombre de dominio que resolverán la liga. 
+- Posteriormente, se le indica a cada uno de esos servidores de dominio cuál es la dirección IP de la máquina que resuelve.
+
+De lo anterior, cada vez que alguien navega en su computadora a algún sitio, el "registrar" que vendió el sitio simplemente indica cuál es el servidor de dominio que sabe la IP del sitio buscado para que se le pregunte a él tal IP. Al final del dia, todo en internet son IP's, pero los nombres de dominio nos facilitan la vida y además nos proporcionan beneficios adicionales que veremos mas adelante, como su uso en los "reverse proxies".
+
+Y a todo esto, te estarás preguntanso: ¿Qué es una dirección IP? Pues una IP (dirección del Protocolo de Internet) es un conjunto de números que determinan de manera única una máquina en internet. Actualmente existe el prtocolo IP v4 y el mas reciente IP v6. El mas conocido (IPv4) se podia identificar fácilmente por su estructura: XX:XX:XX:XX en donde cada XX podia variar entre 0 y 255.
+
+En la actualidad hay tantos dispositivos que la cantidad de direcciones IP que se podían formar con el patrón de IPv4 ya se está agotando y por tal motivo, ha nacido el proocolo IPv6.
+
+En este curso usaremos aun el protocolo IPv4.
+
+
+
 
