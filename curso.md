@@ -43,6 +43,8 @@ En la actualidad hay tantos dispositivos que la cantidad de direcciones IP que s
 
 En este curso usaremos aun el protocolo IPv4.
 
+De lo anterior, podríamos pensar que si un dominio está ligado a una cierta IP (gracias al servidor de dominio -DNS- que los conecta) entonces podríamos acceder a ese sitio usando su nombre de dominio o usando su IP; y eso es parcialmente correcto, ya que como veremos posteriormente, hay casos en los que una IP puede responder a mas de un nombre de dominio. Pero eso lo veremos después.
+
 
 
 
