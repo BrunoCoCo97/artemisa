@@ -14,7 +14,7 @@
   - ✅ Instalar docker (4 simples pasos)
   - ✅ Crear cuenta en https://hub.docker.com/
   - ✅ Instalar GIT (si es que no está instalado)
-  - ✅ Instalar ohMy zsh 
+  - ✅ Instalar ohMy zsh (opcionalmente usar el tema "agnoster") 
   - ✅ Instalar sdkman
   - ✅ Usando sdkman, instalar Java 8, 11 y 17 simultáneamente
   - ✅ Instalar IDE (yo uso Eclipse)
