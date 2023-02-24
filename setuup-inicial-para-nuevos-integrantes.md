@@ -15,7 +15,7 @@
   - ✅ Instalar GIT (si es que no está instalado)
   - ✅ Instalar ohMy zsh 
   - ✅ Instalar sdkman
-  - ✅ Instalar Java 8, 11 y 17 (simultáneamente con sdkman)
+  - ✅ Usando sdkman, instalar Java 8, 11 y 17 simultáneamente
   - ✅ Instalar IDE (yo uso Eclipse)
   - ✅ Instalar Postman
   - ✅ Instalar discord
