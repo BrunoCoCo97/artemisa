@@ -9,7 +9,8 @@
 - ✅ Crear estructura de repo "taller-ultrasist" e invitar al usuario arellano-gustavo (como Writer)
 - ✅ Leer las instrucciones para hacer buenas preguntas
 - dentro de la máquina virtural
-  - ✅ Usuario principal: "ubuntu" y verificar que ese usuario puede invocar comandos con "sudo"
+  - ✅ Verificar que el usuario principal se llama: "ubuntu"
+  - ✅ Verificar que al usuario "ubuntu" puede invocar comandos con "sudo"
   - ✅ Instalar docker (4 simples pasos)
   - ✅ Crear cuenta en https://hub.docker.com/
   - ✅ Instalar GIT (si es que no está instalado)
